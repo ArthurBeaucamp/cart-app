@@ -11,10 +11,19 @@ import {
 } from '@angular-redux/store';
 import { rootReducer } from './store/combine-reducers';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsDisplayComponent } from './pages/products-display/products-display.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BadgeModule } from 'primeng/badge';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgReduxModule],
+  declarations: [AppComponent, ProductsDisplayComponent, HeaderComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgReduxModule,
+    BadgeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

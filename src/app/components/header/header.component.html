@@ -1,0 +1,21 @@
+<header class="header">
+  <a [routerLink]="'/'" routerLinkActive="active"
+    ><h1 class="header-title">Élsass Làde</h1></a
+  >
+
+  <nav class="header-menu">
+    <ul>
+      <li *ngFor="let icon of faIcons">
+        <a [routerLink]="'/' + icon.route" routerLinkActive="active">
+          <i *ngIf="icon.count === undefined" [class]="icon.icon"></i
+          ><i
+            *ngIf="icon.count !== undefined"
+            [class]="icon.icon"
+            pBadge
+            [value]="icon.count"
+          ></i
+        ></a>
+      </li>
+    </ul>
+  </nav>
+</header>

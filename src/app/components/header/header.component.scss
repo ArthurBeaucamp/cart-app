@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+.header {
+  @include flex_parent(space-between, wrap, center);
+
+  background: $background-color;
+  height: $header-height;
+  padding: $base-spacing;
+  border-bottom: 1px solid #c0c0c0;
+  box-shadow: 0px 0px 15px 2px #dcdcdc;
+
+  &-title {
+    @include text_properties(
+      $title-size,
+      $title-color,
+      $title-weigth,
+      uppercase
+    );
+
+    margin-left: $base-spacing;
+  }
+
+  &-menu ul {
+    @include flex_parent(flex-end, nowrap);
+
+    i {
+      @include text_properties($icon-size, $text-color);
+
+      &:hover {
+        color: $main-color;
+      }
+
+      ::ng-deep span.p-badge {
+        background: $main-color;
+      }
+    }
+
+    li {
+      margin-right: $base-spacing;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin flex_parent(
+  $justifyContent,
+  $flexWrap: wrap,
+  $alignItems: stretch,
+  $direction: row
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  flex-wrap: $flexWrap;
+  align-items: $alignItems;
+  flex-direction: $direction;
+}
+
+@mixin text_properties($size, $color, $weight: normal, $transform: none) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  text-transform: $transform;
+}

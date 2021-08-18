@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
 @import "./app/styles/variables";
 @import "./app/styles/mixins";
 @import "./app/styles/placeholders";
+
+body {
+  font-family: "Dancing Script", cursive;
+}
