@@ -8,6 +8,8 @@ import { Article } from 'src/libs/data-structures/entities/articles/article.enti
   styleUrls: ['./products-display.component.scss'],
 })
 export class ProductsDisplayComponent implements OnInit {
+  articles: Article[] = [];
+
   constructor(private readonly articlesService: ArticlesService) {}
 
   ngOnInit() {
@@ -15,9 +17,6 @@ export class ProductsDisplayComponent implements OnInit {
   }
 
   async getArticles(): Promise<void> {
-    const articles: Article[] = await this.articlesService.getArticles();
-
-    // TODO à virer dès que l'affichage est implémenté
-    console.log(articles);
+    this.articles = await this.articlesService.getArticles();
   }
 }

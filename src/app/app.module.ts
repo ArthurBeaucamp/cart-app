@@ -14,9 +14,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsDisplayComponent } from './pages/products-display/products-display.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BadgeModule } from 'primeng/badge';
+import { ProductsDisplayItemComponent } from './pages/products-display/components/products-display-item/products-display-item.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductsDisplayComponent, HeaderComponent],
+  declarations: [AppComponent, ProductsDisplayComponent, HeaderComponent, ProductsDisplayItemComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

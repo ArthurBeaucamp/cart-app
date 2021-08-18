@@ -1,0 +1,24 @@
+@import "../../../styles.scss";
+
+h2 {
+  @include text_properties($title-size, $main-color, 700, uppercase);
+
+  margin-top: $base-spacing;
+  text-align: center;
+}
+
+.products {
+  @include flex_parent(center);
+
+  padding: $base-spacing * 2 $base-spacing $base-spacing $base-spacing * 2;
+  background: $background-color;
+
+  &-article {
+    min-width: 20rem;
+    min-height: 25rem;
+    margin: 0 $base-spacing $base-spacing 0;
+
+    background: $card-color;
+    border-radius: 10px;
+  }
+}
