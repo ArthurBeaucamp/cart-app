@@ -34,5 +34,9 @@
     bottom: $base-spacing;
     left: 50%;
     transform: translateX(-50%);
+
+    &:focus {
+      box-shadow: none;
+    }
   }
 }

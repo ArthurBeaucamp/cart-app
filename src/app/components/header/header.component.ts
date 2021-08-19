@@ -1,4 +1,6 @@
+import { select } from '@angular-redux/store';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { routeName } from 'src/app/app-routing.module';
 
 @Component({
@@ -7,9 +9,11 @@ import { routeName } from 'src/app/app-routing.module';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @select(['cart']) readonly stateCart: Observable<number[]>;
+
   routeName = routeName;
 
-  faIcons: { icon: string; route: string; count?: string }[] = [
+  faIcons: { icon: string; route: string }[] = [
     {
       icon: 'pi pi-home',
       route: routeName.products,
@@ -17,7 +21,6 @@ export class HeaderComponent implements OnInit {
     {
       icon: 'pi pi-shopping-cart',
       route: routeName.cart,
-      count: '0',
     },
   ];
 

@@ -32,7 +32,6 @@ describe('HeaderComponent', () => {
       {
         icon: 'pi pi-shopping-cart',
         route: 'cart',
-        count: '7',
       },
     ];
     fixture.detectChanges();

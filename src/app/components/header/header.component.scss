@@ -22,12 +22,13 @@
   &-menu ul {
     @include flex_parent(flex-end, nowrap);
 
+    a.active i,
+    i:hover {
+      color: $main-color;
+    }
+
     i {
       @include text_properties($icon-size, $text-color);
-
-      &:hover {
-        color: $main-color;
-      }
 
       ::ng-deep span.p-badge {
         background: $main-color;

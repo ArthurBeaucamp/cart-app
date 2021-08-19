@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartStoreService } from 'src/libs/app-structures/cart/cart.store.service';
 import { Article } from 'src/libs/data-structures/entities/articles/article.entity';
 
 @Component({
@@ -9,4 +10,10 @@ import { Article } from 'src/libs/data-structures/entities/articles/article.enti
 export class ProductsDisplayItemComponent {
   @Input()
   article: Article;
+
+  constructor(private readonly cartStore: CartStoreService) {}
+
+  addArticleToCart(articleId: number): void {
+    this.cartStore.addArticle(articleId);
+  }
 }

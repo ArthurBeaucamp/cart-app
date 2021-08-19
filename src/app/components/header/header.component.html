@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" *ngIf="stateCart | async; let cart">
   <a [routerLink]="'/'" routerLinkActive="active"
     ><h1 class="header-title">Élsass Làde</h1></a
   >
@@ -7,14 +7,15 @@
     <ul>
       <li *ngFor="let icon of faIcons">
         <a [routerLink]="'/' + icon.route" routerLinkActive="active">
-          <i *ngIf="icon.count === undefined" [class]="icon.icon"></i
-          ><i
-            *ngIf="icon.count !== undefined"
+          <i *ngIf="icon.route !== routeName.cart" [class]="icon.icon"></i>
+
+          <i
+            *ngIf="icon.route === routeName.cart"
             [class]="icon.icon"
             pBadge
-            [value]="icon.count"
-          ></i
-        ></a>
+            [value]="cart.length.toString()"
+          ></i>
+        </a>
       </li>
     </ul>
   </nav>

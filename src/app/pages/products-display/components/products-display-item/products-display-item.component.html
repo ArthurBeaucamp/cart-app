@@ -5,5 +5,11 @@
 
   <p class="product-description">{{ article.description }}</p>
 
-  <button pButton pRipple type="button" label="Ajouter au panier"></button>
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Ajouter au panier"
+    (click)="addArticleToCart(article.id)"
+  ></button>
 </figure>
