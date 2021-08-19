@@ -1,1 +1,9 @@
-<p>products-display-item works!</p>
+<figure *ngIf="article" class="product">
+  <img class="product-image" [src]="article.imageUrl" [alt]="article.name" />
+
+  <figcaption class="product-name">{{ article.name }}</figcaption>
+
+  <p class="product-description">{{ article.description }}</p>
+
+  <button pButton pRipple type="button" label="Ajouter au panier"></button>
+</figure>

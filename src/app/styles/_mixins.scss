@@ -17,3 +17,13 @@
   font-weight: $weight;
   text-transform: $transform;
 }
+
+@mixin element_size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin change_button_color($color) {
+  background: $color;
+  border: 1px solid $color;
+}

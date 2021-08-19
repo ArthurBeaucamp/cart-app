@@ -15,15 +15,22 @@ import { ProductsDisplayComponent } from './pages/products-display/products-disp
 import { HeaderComponent } from './components/header/header.component';
 import { BadgeModule } from 'primeng/badge';
 import { ProductsDisplayItemComponent } from './pages/products-display/components/products-display-item/products-display-item.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  declarations: [AppComponent, ProductsDisplayComponent, HeaderComponent, ProductsDisplayItemComponent],
+  declarations: [
+    AppComponent,
+    ProductsDisplayComponent,
+    HeaderComponent,
+    ProductsDisplayItemComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgReduxModule,
     BadgeModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

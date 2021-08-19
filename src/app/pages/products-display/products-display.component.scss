@@ -14,11 +14,10 @@ h2 {
   background: $background-color;
 
   &-article {
-    min-width: 20rem;
-    min-height: 25rem;
-    margin: 0 $base-spacing $base-spacing 0;
+    @include element_size(20rem, 23rem);
 
+    margin: 0 $base-spacing $base-spacing 0;
     background: $card-color;
-    border-radius: 10px;
+    border-radius: $radius-size;
   }
 }

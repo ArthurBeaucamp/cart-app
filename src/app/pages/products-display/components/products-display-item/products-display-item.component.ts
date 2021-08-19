@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from 'src/libs/data-structures/entities/articles/article.entity';
 
 @Component({
@@ -6,13 +6,7 @@ import { Article } from 'src/libs/data-structures/entities/articles/article.enti
   templateUrl: './products-display-item.component.html',
   styleUrls: ['./products-display-item.component.scss'],
 })
-export class ProductsDisplayItemComponent implements OnInit {
+export class ProductsDisplayItemComponent {
   @Input()
   article: Article;
-
-  constructor() {}
-
-  ngOnInit(): void {
-    console.log(this.article);
-  }
 }

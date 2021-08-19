@@ -1,0 +1,38 @@
+@import "../../../../../styles.scss";
+
+.product {
+  height: 100%;
+  text-align: center;
+  position: relative;
+
+  &-image {
+    @include element_size(100%, 12rem);
+    @extend %border-and-box-shadow;
+
+    object-fit: cover;
+    border-radius: $radius-size $radius-size 0 0;
+  }
+
+  &-name {
+    @include text_properties($card-title-size, $title-color, 700, uppercase);
+
+    margin-top: $base-spacing;
+  }
+
+  &-description {
+    @include text_properties($text-size, $text-color);
+    @extend %truncate-text-multiple-lines;
+
+    max-height: 6rem;
+    margin: $base-spacing $base-spacing 0 $base-spacing;
+  }
+
+  button {
+    @include change_button_color($main-color);
+
+    position: absolute;
+    bottom: $base-spacing;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
