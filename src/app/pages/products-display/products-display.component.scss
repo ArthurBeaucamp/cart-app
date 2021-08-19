@@ -1,5 +1,10 @@
 @import "../../../styles.scss";
 
+#page-container {
+  margin: auto;
+  max-width: $max-width;
+}
+
 h2 {
   @include text_properties($title-size, $main-color, 700, uppercase);
 

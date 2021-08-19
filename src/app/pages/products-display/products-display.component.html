@@ -1,9 +1,11 @@
-<h2>Nos produits</h2>
+<div id="page-container">
+  <h2>Nos produits</h2>
 
-<div *ngIf="articles.length > 0" class="products">
-  <app-products-display-item
-    *ngFor="let article of articles"
-    class="products-article"
-    [article]="article"
-  ></app-products-display-item>
+  <div *ngIf="articles.length > 0" class="products">
+    <app-products-display-item
+      *ngFor="let article of articles"
+      class="products-article"
+      [article]="article"
+    ></app-products-display-item>
+  </div>
 </div>
