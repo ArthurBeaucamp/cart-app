@@ -12,6 +12,12 @@
     text-align: center;
   }
 
+  #cart-empty {
+    @include text_properties($title-size, $text-color);
+
+    text-align: center;
+  }
+
   .article {
     @include element_size(100%, 8rem);
 
