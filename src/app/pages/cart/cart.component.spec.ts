@@ -1,21 +1,21 @@
 import { NgReduxModule } from '@angular-redux/store';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductsDisplayItemComponent } from './products-display-item.component';
+import { CartComponent } from './cart.component';
 
-describe('ProductsDisplayItemComponent', () => {
-  let component: ProductsDisplayItemComponent;
-  let fixture: ComponentFixture<ProductsDisplayItemComponent>;
+describe('CartComponent', () => {
+  let component: CartComponent;
+  let fixture: ComponentFixture<CartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [NgReduxModule],
-      declarations: [ProductsDisplayItemComponent],
+      declarations: [CartComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductsDisplayItemComponent);
+    fixture = TestBed.createComponent(CartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

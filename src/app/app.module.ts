@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BadgeModule } from 'primeng/badge';
 import { ProductsDisplayItemComponent } from './pages/products-display/components/products-display-item/products-display-item.component';
 import { ButtonModule } from 'primeng/button';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ButtonModule } from 'primeng/button';
     ProductsDisplayComponent,
     HeaderComponent,
     ProductsDisplayItemComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

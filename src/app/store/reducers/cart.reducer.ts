@@ -27,9 +27,9 @@ export const cartReducer: Reducer<number[]> = (
         (stateId) => stateId === action.payload.articleId
       );
 
-      return indexToDelete !== undefined
-        ? state.splice(indexToDelete, 1)
-        : state;
+      indexToDelete !== -1 && state.splice(indexToDelete, 1);
+
+      return state;
 
     default:
       return state;

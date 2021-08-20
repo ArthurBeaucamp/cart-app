@@ -28,15 +28,6 @@
   }
 
   button {
-    @include change_button_color($main-color);
-
-    position: absolute;
-    bottom: $base-spacing;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &:focus {
-      box-shadow: none;
-    }
+    @extend %button-style-and-position;
   }
 }

@@ -1,0 +1,31 @@
+<div id="page-container">
+  <h2>Mon panier</h2>
+
+  <div *ngFor="let cart of cartArticles" class="article">
+    <figure class="article-figure">
+      <img
+        class="article-figure-image"
+        [src]="cart.article.imageUrl"
+        [alt]="cart.article.name"
+      />
+
+      <div id="figure-description-container">
+        <figcaption class="article-figure-name">
+          {{ cart.article.name }} X {{ cart.value }}
+        </figcaption>
+
+        <p class="article-figure-description">
+          {{ cart.article.description }}
+        </p>
+      </div>
+    </figure>
+
+    <button
+      pButton
+      pRipple
+      type="button"
+      label="Retirer du panier"
+      (click)="removeArticleToCart(cart.article.id)"
+    ></button>
+  </div>
+</div>

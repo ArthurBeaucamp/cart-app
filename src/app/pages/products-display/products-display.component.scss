@@ -3,26 +3,26 @@
 #page-container {
   margin: auto;
   max-width: $max-width;
-}
 
-h2 {
-  @include text_properties($title-size, $main-color, 700, uppercase);
+  h2 {
+    @include text_properties($title-size, $main-color, 700, uppercase);
 
-  margin-top: $base-spacing;
-  text-align: center;
-}
+    margin-top: $base-spacing;
+    text-align: center;
+  }
 
-.products {
-  @include flex_parent(center);
+  .products {
+    @include flex_parent(center);
 
-  padding: $base-spacing * 2 $base-spacing $base-spacing $base-spacing * 2;
-  background: $background-color;
+    padding: $base-spacing * 2 $base-spacing $base-spacing $base-spacing * 2;
+    background: $background-color;
 
-  &-article {
-    @include element_size(20rem, 23rem);
+    &-article {
+      @include element_size(20rem, 23rem);
 
-    margin: 0 $base-spacing $base-spacing 0;
-    background: $card-color;
-    border-radius: $radius-size;
+      margin: 0 $base-spacing $base-spacing 0;
+      background: $card-color;
+      border-radius: $radius-size;
+    }
   }
 }

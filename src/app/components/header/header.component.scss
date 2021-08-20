@@ -22,6 +22,10 @@
   &-menu ul {
     @include flex_parent(flex-end, nowrap);
 
+    a:focus {
+      outline: none;
+    }
+
     a.active i,
     i:hover {
       color: $main-color;

@@ -1,0 +1,73 @@
+@import "../../../styles.scss";
+
+#page-container {
+  margin: auto;
+  max-width: $max-width;
+  padding: $base-spacing;
+
+  h2 {
+    @include text_properties($title-size, $main-color, 700, uppercase);
+
+    margin: $base-spacing 0 $base-spacing * 2;
+    text-align: center;
+  }
+
+  .article {
+    @include element_size(100%, 8rem);
+
+    position: relative;
+    margin-top: $base-spacing;
+    background: $card-color;
+    border-radius: $radius-size;
+
+    &-figure {
+      @include flex_parent(left, nowrap);
+
+      height: 100%;
+
+      #figure-description-container {
+        padding: $base-spacing 6rem $base-spacing $base-spacing;
+      }
+
+      &-image {
+        @include element_size(6rem, 100%);
+
+        object-fit: cover;
+        border-radius: $radius-size 0 0 $radius-size;
+      }
+
+      &-name {
+        @include text_properties(
+          $card-title-size,
+          $title-color,
+          700,
+          uppercase
+        );
+
+        margin-bottom: $base-spacing;
+      }
+
+      &-description {
+        @include text_properties($text-size, $text-color);
+        @extend %truncate-text-multiple-lines;
+
+        max-height: 100%;
+      }
+    }
+
+    button {
+      @include change_button_color($main-color);
+      @include element_size(5rem, 100%);
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 0 $radius-size $radius-size 0;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
